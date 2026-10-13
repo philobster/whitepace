@@ -12,40 +12,41 @@ export function Navbar() {
 
     return (
         <div className="bg-primary text-white font-[350] text-[18px] leading-[23px]">
-            <nav className="flex justify-between border-b border-secondary-yellow/30 p-[16px] 2xl:px-[220px] 2xl:py-[17px]">
+            <nav className="flex justify-between border-b border-secondary-yellow/30 p-[16px] md:px-[32px] 2xl:px-[220px] md:py-[16px]">
                 <Logo />
 
-                <div className="hidden 2xl:flex gap-[60px]">
-                    <div className="flex items-center gap-[34px] font-dm">
-                        <div className="flex gap-[10px]">
+                <div className="flex gap-[60px]">
+                    <div className="hidden xl:flex items-center gap-[20px] font-dm">
+                        <div className="flex gap-[4px]">
                             <span>Products</span>
                             <DownArrow />
                         </div>
-                        <div className="flex gap-[10px]">
+                        <div className="flex gap-[4px]">
                             <span>Solutions</span>
                             <DownArrow />
                         </div>
-                        <div className="flex gap-[10px]">
+                        <div className="flex gap-[4px]">
                             <span>Resources</span>
                             <DownArrow />
                         </div>
-                        <div className="flex gap-[10px]">
+                        <div className="flex gap-[4px]">
                             <span>Pricing</span>
                             <DownArrow />
                         </div>
                     </div>
                     <div className="flex gap-[24px]">
-                        <Button color="secondary">Login</Button>
-                        <Button color="primary">Try Whitepace free <RightArrow /></Button>
+                        <div className="hidden lg:flex gap-[24px]">
+                            <Button color="secondary">Login</Button>
+                            <Button color="primary">Try Whitepace free <RightArrow /></Button>
+                        </div>
+                        <button className="xl:hidden" onClick={ () => setIsMenuOpen(!isMenuOpen) }>
+                            <HamburgerMenuIcon />
+                        </button>
                     </div>
                 </div>
-
-                <button className="xl:hidden" onClick={ () => setIsMenuOpen(!isMenuOpen)}>
-                    <HamburgerMenuIcon />
-                </button>
             </nav>
             {isMenuOpen && (
-                <div className="flex flex-col items-center gap-[16px] border-b border-secondary-yellow/30 p-[16px]">
+                <div className="flex xl:hidden flex-col lg:flex-row justify-center items-center gap-[16px] lg:gap-[36px] border-b border-secondary-yellow/30 p-[16px]">
                     <div className="flex gap-[10px]">
                         <span>Products</span>
                         <DownArrow />
@@ -62,8 +63,10 @@ export function Navbar() {
                         <span>Pricing</span>
                         <DownArrow />
                     </div>
-                    <Button color="secondary">Login</Button>
-                    <Button color="primary">Try Whitepace free <RightArrow /></Button>
+                    <div className="flex lg:hidden flex-col items-center gap-[16px]">
+                        <Button color="secondary">Login</Button>
+                        <Button color="primary">Try Whitepace free <RightArrow /></Button>
+                    </div>
                 </div>
             )}
         </div>
