@@ -11,10 +11,9 @@ export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="bg-primary text-white font-[350] text-[18px] leading-[23px]">
+        <div className="bg-primary text-white font-[350] text-[18px] leading-[23px] z-10">
             <nav className="flex justify-between border-b border-secondary-yellow/30 p-[16px] md:px-[32px] 2xl:px-[220px] md:py-[16px]">
                 <Logo />
-
                 <div className="flex gap-[60px]">
                     <div className="hidden xl:flex items-center gap-[20px] font-dm">
                         <div className="flex gap-[4px]">
@@ -35,9 +34,9 @@ export function Navbar() {
                         </div>
                     </div>
                     <div className="flex gap-[24px]">
-                        <div className="hidden lg:flex gap-[24px]">
-                            <Button color="secondary">Login</Button>
-                            <Button color="primary">Try Whitepace free <RightArrow /></Button>
+                        <div className="hidden lg:flex gap-[24px] tracking-[-0.02em]">
+                            <Button color="secondary" font="bold">Login</Button>
+                            <Button color="primary" font="bold">Try Whitepace free <RightArrow /></Button>
                         </div>
                         <button className="xl:hidden" onClick={ () => setIsMenuOpen(!isMenuOpen) }>
                             <HamburgerMenuIcon />
@@ -63,9 +62,9 @@ export function Navbar() {
                         <span>Pricing</span>
                         <DownArrow />
                     </div>
-                    <div className="flex lg:hidden flex-col items-center gap-[16px]">
-                        <Button color="secondary">Login</Button>
-                        <Button color="primary">Try Whitepace free <RightArrow /></Button>
+                    <div className="flex lg:hidden flex-col items-center gap-[16px] tracking-[-0.02em]">
+                        <Button color="secondary" font="bold">Login</Button>
+                        <Button color="primary" font="bold">Try Whitepace free <RightArrow /></Button>
                     </div>
                 </div>
             )}
