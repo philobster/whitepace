@@ -35,8 +35,8 @@ export function Navbar() {
                     </div>
                     <div className="flex gap-[24px]">
                         <div className="hidden lg:flex gap-[24px] tracking-[-0.02em]">
-                            <Button color="secondary" font="bold">Login</Button>
-                            <Button color="primary" font="bold">Try Whitepace free <RightArrow /></Button>
+                            <Button color="secondary" font="bold" paddingX="normal">Login</Button>
+                            <Button color="primary" font="bold" paddingX="small">Try Whitepace free <RightArrow /></Button>
                         </div>
                         <button className="xl:hidden" onClick={ () => setIsMenuOpen(!isMenuOpen) }>
                             <HamburgerMenuIcon />
@@ -63,8 +63,8 @@ export function Navbar() {
                         <DownArrow />
                     </div>
                     <div className="flex lg:hidden flex-col items-center gap-[16px] tracking-[-0.02em]">
-                        <Button color="secondary" font="bold">Login</Button>
-                        <Button color="primary" font="bold">Try Whitepace free <RightArrow /></Button>
+                        <Button color="secondary" font="bold" paddingX="normal">Login</Button>
+                        <Button color="primary" font="bold" paddingX="small">Try Whitepace free <RightArrow /></Button>
                     </div>
                 </div>
             )}
