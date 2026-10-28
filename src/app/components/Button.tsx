@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type ButtonProps = {
   children: ReactNode;
-  color: "primary" | "secondary";
+  color: "primary" | "secondary" | "tertiary";
   font: "bold" | "normal";
   paddingX: "small" | "normal";
 };
@@ -12,7 +12,8 @@ export function Button({ children, color, font, paddingX }: ButtonProps) {
 
     const colors = {
         primary: "bg-accent text-white",
-        secondary: "bg-secondary-yellow text-primary"
+        secondary: "bg-secondary-yellow text-primary",
+        tertiary: "border border-secondary-yellow text-text"
     };
 
     const fonts = {

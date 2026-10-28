@@ -2,13 +2,40 @@ import { Button } from "./components/Button";
 import { HeroSectionGraphic } from "./components/icons/HeroSectionGraphic";
 import { HighlighterStrokeLarge } from "./components/icons/HighlighterStrokeLarge";
 import { HighlighterStrokeMedium } from "./components/icons/HighlighterStrokeMedium";
+import { HighlighterStrokeSmall } from "./components/icons/HighlighterStrokeSmall";
 import { RightArrow } from "./components/icons/RightArrow";
 import { RightArrowLarge } from "./components/icons/RightArrowLarge";
 import { WorkManagementGraphic } from "./components/icons/WorkManagementSectionGraphic";
 import { WorkTogetherImage } from "./components/icons/WorkTogetherImage";
 import { Navbar } from "./components/Navbar";
+import { PlanCard } from "./components/PlanCard";
 
 export default function Home() {
+
+  const plans = [
+    {
+      name: "Free",
+      price: "$0",
+      description: "Capture ideas and find them quickly",
+      features: ["Sync unlimited devices", "10 GB monthly uploads", "200 MB max. note size", "Customize Home dashboard and access extra widgets", "Connect primary Google Calendar account", "Add due dates, reminders, and notifications to your tasks"],
+      highlighted: false,
+    },
+    {
+      name: "Personal",
+      price: "$11.99",
+      description: "Keep home and family on track",
+      features: ["Sync unlimited devices", "10 GB monthly uploads", "200 MB max. note size", "Customize Home dashboard and access extra widgets", "Connect primary Google Calendar account", "Add due dates, reminders, and notifications to your tasks"],
+      highlighted: true,
+    },
+    {
+      name: "Organization",
+      price: "$49.99",
+      description: "Capture ideas and find them quickly",
+      features: ["Sync unlimited devices", "10 GB monthly uploads", "200 MB max. note size", "Customize Home dashboard and access extra widgets", "Connect primary Google Calendar account", "Add due dates, reminders, and notifications to your tasks"],
+      highlighted: false,
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -117,6 +144,36 @@ export default function Home() {
               <span className="font-normal leading-[30px]">Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.</span>
           </div>
           <Button color="primary" font="normal" paddingX="normal">Let's Go <RightArrowLarge /></Button>
+        </div>
+      </div>
+
+      
+      <div className="relative flex flex-col gap-[60px] justify-center items-center px-[16px] md:px-[20px] lg:px-[32px] 2xl:px-[220px] py-[80px] md:py-[140px] text-text text-[18px] tracking-[-0.02em] overflow-hidden">
+
+        <div className="md:hidden absolute inset-0 flex pointer-events-none translate-x-[110px] translate-y-[148px]">
+          <HighlighterStrokeSmall />
+        </div>
+        <div className="hidden md:block absolute inset-0 flex lg:items-start pointer-events-none translate-x-[380px] lg:translate-x-[556px] xl:translate-x-[708px] 2xl:translate-x-[938px] translate-y-[184px] lg:translate-y-[194px] xl:translate-y-[200px]">
+          <HighlighterStrokeMedium />
+        </div>
+
+        <div className="relative flex flex-col gap-[24px] items-center text-center">
+          <span className="font-bold text-[36px] md:text-[54px] lg:text-[64px] xl:text-[72px] leading-[44px] md:leading-[64px] lg:leading-[80px] xl:leading-[88px] tracking-[-0.02em]">Choose Your Plan</span>
+          <span className="font-normal leading-[30px]">Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.</span>
+        </div>
+
+        <div className="relative flex gap-[32px] lg:justify-center overflow-x-auto snap-x snap-mandatory scroll-smooth w-[calc(100%+32px)] md:w-[calc(100%+40px)] lg:w-full -mx-[16px] md:mx-0 px-[16px] md:px-[144px] lg:px-0">
+          {plans.map((plan) => (
+            <div key={plan.name} className="snap-center shrink-0 lg:shrink">
+              <PlanCard plan={plan} />
+            </div>
+          ))}
+        </div>
+
+        <div className="md:hidden relative flex justify-center gap-[12px]">
+          <div className="w-[12px] h-[12px] rounded-full bg-accent" />
+          <div className="w-[12px] h-[12px] rounded-full bg-primary" />
+          <div className="w-[12px] h-[12px] rounded-full bg-accent" />
         </div>
       </div>
     </>
