@@ -1,5 +1,6 @@
 import { Button } from "./components/Button";
 import { HeroSectionGraphic } from "./components/icons/HeroSectionGraphic";
+import { HighlighterStrokeBlue } from "./components/icons/HighlighterStrokeBlue";
 import { HighlighterStrokeLarge } from "./components/icons/HighlighterStrokeLarge";
 import { HighlighterStrokeMedium } from "./components/icons/HighlighterStrokeMedium";
 import { HighlighterStrokeSmall } from "./components/icons/HighlighterStrokeSmall";
@@ -7,6 +8,8 @@ import { RightArrow } from "./components/icons/RightArrow";
 import { RightArrowLarge } from "./components/icons/RightArrowLarge";
 import { WorkManagementGraphic } from "./components/icons/WorkManagementSectionGraphic";
 import { WorkTogetherImage } from "./components/icons/WorkTogetherImage";
+import { YourDataGraphic } from "./components/icons/YourDataGraphic";
+import { YourWorkGraphic } from "./components/icons/YourWorkGraphic";
 import { Navbar } from "./components/Navbar";
 import { PlanCard } from "./components/PlanCard";
 
@@ -174,6 +177,45 @@ export default function Home() {
           <div className="w-[12px] h-[12px] rounded-full bg-accent" />
           <div className="w-[12px] h-[12px] rounded-full bg-primary" />
           <div className="w-[12px] h-[12px] rounded-full bg-accent" />
+        </div>
+      </div>
+
+
+      <div className="relative flex flex-col lg:flex-row px-[16px] md:px-[20px] lg:px-[32px] xl:px-[188px] 2xl:px-[426px] md:pr-[144px] lg:pr-[470px] pt-[100px] pb-[140px] md:py-[140px] bg-primary text-white text-[18px] tracking-[-0.02em] overflow-hidden">
+
+        <div className="absolute inset-0 flex pointer-events-none -translate-y-[8px] lg:translate-y-[8px] xl:-translate-y-[180px] 2xl:-translate-y-[180px]">
+          <YourWorkGraphic />
+        </div>
+        <div className="absolute inset-0 flex pointer-events-none translate-x-[16px] md:translate-x-[12px] lg:translate-x-[410px] xl:translate-x-[980px] 2xl:translate-x-[1216px] translate-y-[214px] md:translate-y-[240px] lg:translate-y-[268px] xl:translate-y-[202px] 2xl:translate-y-[200px]">
+          <HighlighterStrokeBlue />
+        </div>
+
+        <div className="relative flex flex-col gap-[60px] items-start xl:items-center">
+          <div className="flex flex-col gap-[24px] text-left xl:text-center">
+              <span className="font-bold text-[36px] md:text-[54px] lg:text-[64px] xl:text-[72px] leading-[44px] md:leading-[64px] lg:leading-[80px] xl:leading-[88px] tracking-[-0.02em]">Your work, everywhere you are</span>
+              <span className="font-normal leading-[30px] lg:text-center">Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</span>
+          </div>
+          <Button color="primary" font="normal" paddingX="normal">Try Taskey <RightArrowLarge /></Button>
+        </div>
+      </div>
+
+
+      <div className="relative flex flex-col lg:flex-row-reverse gap-[60px] lg:gap-0 px-[16px] md:px-[20px] lg:px-[32px] lg:pr-0 xl:pr-[32px] 2xl:px-[220px] py-[80px] md:py-[140px] items-center text-text text-[18px] tracking-[-0.02em] overflow-hidden">
+
+        <div>
+          <YourDataGraphic />
+        </div>
+
+        <div className="absolute inset-0 flex md:items-center lg:items-start pointer-events-none translate-x-[134px] md:translate-x-[348px] lg:translate-x-[220px] xl:translate-x-[240px] 2xl:translate-x-[440px] translate-y-[384px] md:translate-y-[90px] lg:translate-y-[196px] xl:translate-y-[230px]">
+          <HighlighterStrokeMedium />
+        </div>
+
+        <div className="relative flex flex-col gap-[60px] items-center lg:items-start">
+          <div className="flex flex-col gap-[24px] text-center lg:text-left">
+              <span className="font-bold text-[36px] md:text-[54px] lg:text-[64px] xl:text-[72px] leading-[44px] md:leading-[64px] lg:leading-[80px] xl:leading-[88px] tracking-[-0.02em]">100% your data</span>
+              <span className="font-normal leading-[30px]">The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</span>
+          </div>
+          <Button color="primary" font="normal" paddingX="normal">Read more <RightArrowLarge /></Button>
         </div>
       </div>
     </>

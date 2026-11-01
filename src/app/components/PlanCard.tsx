@@ -16,7 +16,7 @@ type PlanCardProps = {
 
 export function PlanCard({ plan }: PlanCardProps) {
   return (
-    <div className={`flex flex-col gap-[25px] items-start p-[20px] md:px-[44px] rounded-[10px] ${plan.highlighted ? "bg-primary text-white md:py-[80px]" : "bg-white text-text border border-secondary-yellow md:py-[40px] md:my-[40px]"} w-[calc(100vw-32px)] md:w-[61vw] lg:w-auto font-light text-[16px] leading-[20px] tracking-[-0.02em]`}>
+    <div className={`flex flex-col gap-[25px] items-start p-[20px] md:px-[44px] rounded-[10px] ${plan.highlighted ? "bg-primary text-white md:py-[80px]" : "bg-white text-text border border-secondary-yellow md:py-[40px] md:my-[40px]"} w-[calc(100vw-32px)] md:w-[61vw] lg:w-auto font-normal text-[16px] leading-[20px] tracking-[-0.02em]`}>
       <div className="flex flex-col gap-[25px]">
         <span className="font-semibold text-[24px] leading-[36px]">{plan.name}</span>
         <span className={`${plan.highlighted ? "text-secondary-yellow" : "text-text"} font-bold text-[36px] tracking-[-0.02em]`}>{plan.price}</span>
