@@ -2,7 +2,7 @@
 
 A pixel-perfect reproduction of the Whitepace SaaS landing page from Figma, built with Next.js, TypeScript, and Tailwind CSS.
 
-**Live Demo:** [your-vercel-url]
+**Live Demo:** [https://whitepace-topaz.vercel.app/]
 **Figma Design:** [https://www.figma.com/community/file/1156860863353724933]
 
 ## Tech Stack
