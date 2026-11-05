@@ -1,17 +1,24 @@
 import { Button } from "./components/Button";
+import { AppleLogo } from "./components/icons/AppleLogo";
+import { AppsGraphic } from "./components/icons/AppsGraphic";
+import { AppsSectionGraphic } from "./components/icons/AppsSectionGraphic";
+import { GoogleLogo } from "./components/icons/GoogleLogo";
 import { HeroSectionGraphic } from "./components/icons/HeroSectionGraphic";
 import { HighlighterStrokeBlue } from "./components/icons/HighlighterStrokeBlue";
 import { HighlighterStrokeLarge } from "./components/icons/HighlighterStrokeLarge";
 import { HighlighterStrokeMedium } from "./components/icons/HighlighterStrokeMedium";
 import { HighlighterStrokeSmall } from "./components/icons/HighlighterStrokeSmall";
+import { MicrosoftLogo } from "./components/icons/MicrosoftLogo";
 import { RightArrow } from "./components/icons/RightArrow";
 import { RightArrowLarge } from "./components/icons/RightArrowLarge";
+import { SlackLogo } from "./components/icons/SlackLogo";
 import { WorkManagementGraphic } from "./components/icons/WorkManagementSectionGraphic";
 import { WorkTogetherImage } from "./components/icons/WorkTogetherImage";
 import { YourDataGraphic } from "./components/icons/YourDataGraphic";
 import { YourWorkGraphic } from "./components/icons/YourWorkGraphic";
 import { Navbar } from "./components/Navbar";
 import { PlanCard } from "./components/PlanCard";
+import { QuoteCard } from "./components/QuoteCard";
 
 export default function Home() {
 
@@ -36,6 +43,39 @@ export default function Home() {
       description: "Capture ideas and find them quickly",
       features: ["Sync unlimited devices", "10 GB monthly uploads", "200 MB max. note size", "Customize Home dashboard and access extra widgets", "Connect primary Google Calendar account", "Add due dates, reminders, and notifications to your tasks"],
       highlighted: false,
+    },
+  ];
+
+  const quotes = [
+    {
+      name: "Oberon Shaw",
+      title: "MCH",
+      jobTitle: "Head of Talent Acquisition",
+      location: "North America",
+      quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
+      picture: "https://i.pravatar.cc/150?img=1",
+      highlighted: true,
+      id: "1",
+    },
+    {
+      name: "Oberon Shaw",
+      title: "MCH",
+      jobTitle: "Head of Talent Acquisition",
+      location: "North America",
+      quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
+      picture: "https://i.pravatar.cc/150?img=1",
+      highlighted: false,
+      id: "2",
+    },
+    {
+      name: "Oberon Shaw",
+      title: "MCH",
+      jobTitle: "Head of Talent Acquisition",
+      location: "North America",
+      quote: "Taskkey is designed as a collaboration tool for businesses that is a full project management solution.",
+      picture: "https://i.pravatar.cc/150?img=1",
+      highlighted: false,
+      id: "3",
     },
   ];
 
@@ -130,7 +170,7 @@ export default function Home() {
 
       <div className="relative flex flex-col lg:flex-row gap-[60px] 2xl:gap-[98px] px-[16px] md:px-[20px] lg:px-[32px] 2xl:px-[220px] py-[100px] md:py-[140px] items-center text-text text-[18px] tracking-[-0.02em] overflow-hidden">
 
-        <div>
+        <div className="relative">
           <img className="bg-secondary-blue min-w-[288px] md:min-w-[534px] xl:min-w-[670px] 2xl:min-w-[714px] min-h-[214px] md:min-h-[397px] xl:min-h-[499px] 2xl:min-h-[532px]" />
         </div>
 
@@ -202,7 +242,7 @@ export default function Home() {
 
       <div className="relative flex flex-col lg:flex-row-reverse gap-[60px] lg:gap-0 px-[16px] md:px-[20px] lg:px-[32px] lg:pr-0 xl:pr-[32px] 2xl:px-[220px] py-[80px] md:py-[140px] items-center text-text text-[18px] tracking-[-0.02em] overflow-hidden">
 
-        <div>
+        <div className="relative">
           <YourDataGraphic />
         </div>
 
@@ -216,6 +256,71 @@ export default function Home() {
               <span className="font-normal leading-[30px]">The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</span>
           </div>
           <Button color="primary" font="normal" paddingX="normal">Read more <RightArrowLarge /></Button>
+        </div>
+      </div>
+
+
+      <div className="relative flex flex-col gap-[100px] px-[16px] md:px-[20px] lg:px-[32px] 2xl:px-[220px] py-[80px] md:py-[140px] items-center text-text text-[18px] tracking-[-0.02em] overflow-hidden">
+
+        <div className="absolute inset-0 flex lg:items-start pointer-events-none translate-x-[120px] md:translate-x-[324px] lg:translate-x-[480px] xl:translate-x-[630px] 2xl:translate-x-[864px] translate-y-[108px] md:translate-y-[180px] lg:translate-y-[196px] xl:translate-y-[200px]">
+          <HighlighterStrokeMedium />
+        </div>
+
+        <div className="relative">
+          <span className="font-bold text-[36px] md:text-[54px] lg:text-[64px] xl:text-[72px] leading-[44px] md:leading-[64px] lg:leading-[80px] xl:leading-[88px] tracking-[-0.02em]">Our sponsors</span>
+        </div>
+
+        <div className="relative flex flex-col lg:flex-row gap-[100px] items-center lg:justify-between w-full">
+          <AppleLogo />
+          <MicrosoftLogo />
+          <SlackLogo />
+          <GoogleLogo />
+        </div>
+      </div>
+
+
+      <div className="relative flex flex-col lg:flex-row gap-[100px] px-[16px] md:px-[20px] lg:px-[32px] 2xl:px-[220px] py-[80px] md:py-[140px] items-center bg-primary text-white text-[18px] tracking-[-0.02em] overflow-hidden">
+
+        <div className="absolute inset-0 flex pointer-events-none -translate-y-[40px] md:translate-y-0">
+          <AppsSectionGraphic />
+        </div>
+
+        <div className="relative">
+          <AppsGraphic />
+        </div>
+
+        <div className="relative flex flex-col gap-[60px] items-center lg:items-start">
+          <div className="flex flex-col gap-[24px] text-center lg:text-left">
+              <span className="font-bold text-[36px] md:text-[54px] lg:text-[64px] xl:text-[72px] leading-[44px] md:leading-[64px] lg:leading-[80px] xl:leading-[88px] tracking-[-0.02em]">Work with Your Favorite Apps Using whitepace</span>
+              <span className="font-normal leading-[30px]">Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.</span>
+          </div>
+          <Button color="primary" font="normal" paddingX="normal">Read more <RightArrowLarge /></Button>
+        </div>
+      </div>
+
+
+      <div className="relative flex flex-col gap-[60px] justify-center items-center px-[16px] md:px-[20px] lg:px-[32px] 2xl:px-[220px] py-[100px] md:py-[140px] text-text text-[18px] tracking-[-0.02em] overflow-hidden">
+
+        <div className="absolute inset-0 flex pointer-events-none translate-x-[60px] md:translate-x-[360px] lg:translate-x-[430px] xl:translate-x-[570px] 2xl:translate-x-[900px] translate-y-[164px] md:translate-y-[176px] lg:translate-y-[186px] xl:translate-y-[192px]">
+          <HighlighterStrokeLarge />
+        </div>
+
+        <div className="relative flex flex-col gap-[24px] items-center text-center px-[24px]">
+          <span className="font-bold text-[36px] md:text-[54px] lg:text-[64px] xl:text-[72px] leading-[44px] md:leading-[64px] lg:leading-[80px] xl:leading-[88px] tracking-[-0.02em]">What Our Clients Say</span>
+        </div>
+
+        <div className="relative flex gap-[32px] lg:justify-center overflow-x-auto snap-x snap-mandatory scroll-smooth w-[calc(100%+32px)] md:w-[calc(100%+40px)] lg:w-full -mx-[16px] md:mx-0 px-[16px] md:px-[200px] lg:px-0 py-[32px]">
+          {quotes.map((quote) => (
+            <div key={quote.id} className="snap-center shrink-0 lg:shrink">
+              <QuoteCard quote={quote} />
+            </div>
+          ))}
+        </div>
+
+        <div className="relative flex justify-center gap-[12px]">
+          <div className="w-[12px] h-[12px] rounded-full bg-accent" />
+          <div className="w-[12px] h-[12px] rounded-full bg-primary" />
+          <div className="w-[12px] h-[12px] rounded-full bg-accent" />
         </div>
       </div>
     </>
