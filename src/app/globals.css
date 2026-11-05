@@ -7,6 +7,7 @@
   --color-secondary-yellow: #ffe492;
   --color-secondary-blue: #a7cefc;
   --color-text: #212529;
+  --color-line: #2E4E73;
 }
 
 @theme inline {
@@ -15,6 +16,7 @@
   --color-secondary-yellow: var(--color-secondary-yellow);
   --color-secondary-blue: var(--color-secondary-blue);
   --color-text: var(--color-text);
+  --color-line: var(--color-line);
   --font-sans: var(--font-inter);
   --font-dm: var(--font-dm-sans);
 }

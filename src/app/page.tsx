@@ -4,21 +4,27 @@ import { AppleLogo } from "./components/icons/AppleLogo";
 import { AppleLogoWhite } from "./components/icons/AppleLogoWhite";
 import { AppsGraphic } from "./components/icons/AppsGraphic";
 import { AppsSectionGraphic } from "./components/icons/AppsSectionGraphic";
+import { FacebookIcon } from "./components/icons/FacebookIcon";
 import { GoogleLogo } from "./components/icons/GoogleLogo";
 import { HeroSectionGraphic } from "./components/icons/HeroSectionGraphic";
 import { HighlighterStrokeBlue } from "./components/icons/HighlighterStrokeBlue";
 import { HighlighterStrokeLarge } from "./components/icons/HighlighterStrokeLarge";
 import { HighlighterStrokeMedium } from "./components/icons/HighlighterStrokeMedium";
 import { HighlighterStrokeSmall } from "./components/icons/HighlighterStrokeSmall";
+import { LanguageArrow } from "./components/icons/LanguageArrow";
+import { LanguageIcon } from "./components/icons/LanguageIcon";
+import { LinkedinIcon } from "./components/icons/LinkedinIcon";
 import { MicrosoftLogo } from "./components/icons/MicrosoftLogo";
 import { RightArrow } from "./components/icons/RightArrow";
 import { RightArrowLarge } from "./components/icons/RightArrowLarge";
 import { SlackLogo } from "./components/icons/SlackLogo";
+import { TwitterIcon } from "./components/icons/TwitterIcon";
 import { WindowsLogo } from "./components/icons/WindowsLogo";
 import { WorkManagementGraphic } from "./components/icons/WorkManagementSectionGraphic";
 import { WorkTogetherImage } from "./components/icons/WorkTogetherImage";
 import { YourDataGraphic } from "./components/icons/YourDataGraphic";
 import { YourWorkGraphic } from "./components/icons/YourWorkGraphic";
+import { LogoBigText } from "./components/LogoBigText";
 import { Navbar } from "./components/Navbar";
 import { PlanCard } from "./components/PlanCard";
 import { QuoteCard } from "./components/QuoteCard";
@@ -343,6 +349,72 @@ export default function Home() {
             <AppleLogoWhite />
             <WindowsLogo />
             <AndroidLogo />
+          </div>
+        </div>
+      </div>
+
+
+      <div className="flex flex-col gap-[200px] items-center md:items-start lg:items-center px-[16px] md:px-[32px] 2xl:px-[220px] pt-[140px] md:pt-[80px] lg:pt-[140px] pb-[32px] bg-primary text-white text-[18px] leading-[30px] tracking-[-0.02em]">
+        <div className="flex flex-col gap-[80px] md:gap-[100px] lg:gap-[68px] items-center md:items-start xl:w-full">
+          <div className="flex flex-col lg:flex-row gap-[80px] md:gap-[100px] lg:gap-[45px] xl:gap-[100px] 2xl:gap-[190px] items-center md:items-start lg:justify-between xl:justify-start w-full">
+
+            <div className="flex flex-col gap-[24px] lg:gap-[15px] items-center md:items-start text-center md:text-left">
+              <LogoBigText />
+              <span className="lg:hidden">whitepace was created for the new ways we live and work. <br />We make a better workspace around the world.</span>
+              <span className="hidden lg:block">whitepace was created for <br />the new ways we live and <br />work. We make a better <br />worspace around the world.</span>
+            </div>
+
+            <div className="flex flex-col gap-[15px] items-center md:items-start text-center md:text-left">
+              <span className="font-bold">Product</span>
+              <span className="text-secondary-yellow">Overview</span>
+              <span>Pricing</span>
+              <span>Customer stories</span>
+            </div>
+
+            <div className="flex flex-col gap-[16px] items-center md:items-start text-center md:text-left">
+              <span className="font-bold">Resources</span>
+              <span>Blog</span>
+              <span>Guides & tutorials</span>
+              <span>Help center</span>
+            </div>
+
+            <div className="flex flex-col gap-[16px] items-center md:items-start text-center md:text-left">
+              <span className="font-bold">Company</span>
+              <span>About us</span>
+              <span>Careers</span>
+              <span>Media kit</span>
+            </div>
+
+            <div className="flex flex-col gap-[23px] items-center md:items-start text-center md:text-left px-[44px] md:px-0 md:pr-[480px] lg:pr-0">
+              <span className="font-bold text-[28px] leading-[36px] tracking-[-0.02em]">Try It Today</span>
+              <span className="lg:hidden">Get started for free. <br />Add your whole team as your needs grow.</span>
+              <span className="hidden lg:block">Get started for free. Add your <br />whole team as your needs grow.</span>
+              <Button color="primary" font="normal" paddingX="normal">Start today <RightArrowLarge /></Button>
+            </div>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-auto items-center md:items-start lg:items-center lg:justify-between w-full lg:border-t lg:border-line lg:pt-[32px]">
+            <div className="flex flex-col md:flex-row gap-[20px] md:gap-0 lg:gap-[60px] items-center md:justify-between lg:justify-start pb-[20px] lg:pb-0 border-b border-line lg:border-none w-full text-[16px] leading-[20px] tracking-[-0.02em]">
+
+              <div className="flex gap-[6px] items-center">
+                <LanguageIcon />
+                <span>English</span>
+                <div className="p-[4px]">
+                  <LanguageArrow />
+                </div>
+              </div>
+
+              <span>Terms & privacy</span>
+              <span>Security</span>
+              <span>Status</span>
+              <span>©2021 Whitepace LLC.</span>
+            </div>
+
+            <div className="flex gap-[32px] justify-center items-center">
+              <FacebookIcon />
+              <TwitterIcon />
+              <LinkedinIcon />
+            </div>
           </div>
         </div>
       </div>
