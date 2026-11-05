@@ -8,7 +8,7 @@ type ButtonProps = {
 };
 
 export function Button({ children, color, font, paddingX }: ButtonProps) {
-    const base = "flex justify-center items-center gap-[10px] rounded-[8px] py-[20px]";
+    const base = "flex justify-center items-center gap-[10px] rounded-[8px] py-[20px] text-[18px]";
 
     const colors = {
         primary: "bg-accent text-white",

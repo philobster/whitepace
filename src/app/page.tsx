@@ -1,5 +1,7 @@
 import { Button } from "./components/Button";
+import { AndroidLogo } from "./components/icons/AndroidLogo";
 import { AppleLogo } from "./components/icons/AppleLogo";
+import { AppleLogoWhite } from "./components/icons/AppleLogoWhite";
 import { AppsGraphic } from "./components/icons/AppsGraphic";
 import { AppsSectionGraphic } from "./components/icons/AppsSectionGraphic";
 import { GoogleLogo } from "./components/icons/GoogleLogo";
@@ -12,6 +14,7 @@ import { MicrosoftLogo } from "./components/icons/MicrosoftLogo";
 import { RightArrow } from "./components/icons/RightArrow";
 import { RightArrowLarge } from "./components/icons/RightArrowLarge";
 import { SlackLogo } from "./components/icons/SlackLogo";
+import { WindowsLogo } from "./components/icons/WindowsLogo";
 import { WorkManagementGraphic } from "./components/icons/WorkManagementSectionGraphic";
 import { WorkTogetherImage } from "./components/icons/WorkTogetherImage";
 import { YourDataGraphic } from "./components/icons/YourDataGraphic";
@@ -321,6 +324,26 @@ export default function Home() {
           <div className="w-[12px] h-[12px] rounded-full bg-accent" />
           <div className="w-[12px] h-[12px] rounded-full bg-primary" />
           <div className="w-[12px] h-[12px] rounded-full bg-accent" />
+        </div>
+      </div>
+
+
+      <div className="flex flex-col gap-[200px] items-start lg:items-center px-[16px] md:px-[20px] lg:px-[272px] xl:px-[416px] 2xl:px-[756px] pt-[100px] md:pt-[140px] pb-[32px] bg-primary text-white text-[18px] md:text-[24px] leading-[30px] md:leading-[32px] tracking-[-0.02em]">
+        <div className="flex flex-col gap-[40px] items-start lg:items-center">
+
+          <div className="flex flex-col gap-[24px] text-left lg:text-center">
+            <span className="font-bold text-[40px] md:text-[54px] lg:text-[72px] leading-[52px] md:leading-[62px] lg:leading-[88px] tracking-0">Try Whitepace today</span>
+            <span>Get started for free. <br />Add your whole team as your needs grow.</span>
+          </div>
+
+          <Button color="primary" font="normal" paddingX="normal">Try Taskey free <RightArrowLarge /></Button>
+          <span>On a big team? Contact sales</span>
+
+          <div className="flex gap-[40px] justify-start items-center">
+            <AppleLogoWhite />
+            <WindowsLogo />
+            <AndroidLogo />
+          </div>
         </div>
       </div>
     </>
